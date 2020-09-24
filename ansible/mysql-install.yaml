@@ -1,0 +1,6 @@
+- hosts: mysql
+  remote_user: ec2-user
+  gather_facts: True
+
+  roles:
+    - mysql-install

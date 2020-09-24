@@ -1,0 +1,8 @@
+- name: scp mysql soft
+  copy: src=mysql5.7.rpm dest=/tmp/mmysql5.7.rpm
+- name: scp mysql config
+  copy: src=my.cnf dest=/tmp/my.cnf
+- name: scp mysql config
+  copy: src=mysql-install.sh dest=/tmp/mysql-install.sh
+- name: execute mysql script install
+  shell: sudo sh /tmp/mysql-install.sh
