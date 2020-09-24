@@ -2,7 +2,7 @@
 
 
 ##install mysql
-rpm -ivh mysql.rpm
+rpm -ivh /tmp/mysql.rpm
 rm -rf /etc/my.cnf && cp /tmp/my.cnf /etc/my.cnf
 systemctl enable mysqld && systemctl start mysqld
 initpw=`grep  password /var/log/mysqld.log | awk '{print $11}'`
